@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "ng:lib": "yarn run ng --project ngx-semantic-markup",
+    "ng:app": "yarn run ng --project ngx-semantic-demo",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "yarn run ng:lib build",
+    "build:lib:prod": "yarn run build:lib --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

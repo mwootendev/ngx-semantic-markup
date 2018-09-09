@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
-import { NgxSemanticMarkupComponent } from './ngx-semantic-markup.component';
+
+import { MicrodataSemanticMarkupModule } from './microdata-semantic-markup/microdata-semantic-markup.module';
+import { RdfaSemanticMarkupModule } from './rdfa-semantic-markup/rdfa-semantic-markup.module';
 
 @NgModule({
   imports: [
+    MicrodataSemanticMarkupModule,
+    RdfaSemanticMarkupModule
   ],
-  declarations: [NgxSemanticMarkupComponent],
-  exports: [NgxSemanticMarkupComponent]
+  exports: [
+    MicrodataSemanticMarkupModule,
+    RdfaSemanticMarkupModule
+  ]
 })
 export class NgxSemanticMarkupModule { }
