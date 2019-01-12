@@ -1,10 +1,13 @@
-import { Directive } from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 
 @Directive({
-  selector: '[semanticProperty]'
+  selector: '[microdata][semanticProperty]'
 })
 export class MicrodataPropertyDirective {
 
+  @HostBinding('attr.itemprop')
+  @Input()
+  public semanticProperty: string;
+  
   constructor() { }
-
 }

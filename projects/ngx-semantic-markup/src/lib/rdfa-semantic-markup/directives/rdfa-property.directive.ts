@@ -1,10 +1,14 @@
-import { Directive } from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 
 @Directive({
-  selector: '[semanticProperty]'
+  selector: '[rdfa][semanticProperty]'
 })
 export class RdfaPropertyDirective {
 
+  @HostBinding('attr.property')
+  @Input()
+  public semanticProperty: string;
+  
   constructor() { }
 
 }
